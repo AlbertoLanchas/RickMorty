@@ -6,18 +6,19 @@ const Cards = () => {
   useEffect(() => {
     allCharacters(setCharacters);
   }, []);
+  console.log(characters);
+
   return (
-    <div className="col-4">
-      {" "}
+    <>
       {characters !== null
         ? characters.map((character) => (
-            <div key={character.id}>
+            <div key={character.id} className="col-4">
               <a href={`characters/${character.id}`}>{character.name}</a>
               <img src={character.image} alt={character.name} />
             </div>
           ))
-        : "No hay personajes"}
-    </div>
+        : "No characters found :("}
+    </>
   );
 };
 

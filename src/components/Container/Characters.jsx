@@ -17,19 +17,11 @@ const Characters = () => {
           </div>
           <div className="col-8">
             <div className="row">
-              <Cards />
+              <Cards></Cards>
             </div>
           </div>
         </div>
       </div>
-      {characters !== null
-        ? characters.map((character) => (
-            <div key={character.id}>
-              <a href={`characters/${character.id}`}>{character.name}</a>
-              <img src={character.image} alt={character.name} />
-            </div>
-          ))
-        : "No hay personajes"}
     </div>
   );
 };
