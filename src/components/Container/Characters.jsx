@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { allCharacters } from "../../functions/getCharacters";
 import Cards from "../Pure/Cards/Cards";
 import Filters from "../Pure/Filters/Filters";
+import "../../styles/Characters.css";
 
 const Characters = () => {
   const [characters, setCharacters] = useState(null);
