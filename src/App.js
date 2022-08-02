@@ -9,6 +9,7 @@ import CharacterDetails from "./components/Container/CharacterDetails";
 import Episodes from "./components/Container/Episodes";
 import Empty from "./components/Container/Empty";
 import "./App.css";
+import Filters from "./components/Pure/Filters/Filters";
 
 function App() {
   return (
@@ -16,12 +17,6 @@ function App() {
       <h2 className="text-center my-5">
         Rick & Morty <span className="wiki-color">WIKI</span>
       </h2>
-      <div className="container">
-        <div className="row">
-          <div className="col-3"></div>
-          <div className="col-8"></div>
-        </div>
-      </div>
       <BrowserRouter>
         <NavLink to={`/`} key={"home"}>
           HOME

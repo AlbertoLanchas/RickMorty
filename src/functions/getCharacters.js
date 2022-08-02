@@ -1,7 +1,13 @@
 import axios from "axios";
+import React, { useState, useEffect } from "react";
 
 const allCharacters = async (state) => {
-  const request = await axios.get("https://rickandmortyapi.com/api/character");
+  // const [pageNumber, setPageNumber] = useState(1);
+  // useEffect(() => {}, [request]);
+
+  const request = await axios.get(
+    `https://rickandmortyapi.com/api/character/?page=${3}`
+  );
   state(request.data.results);
 };
 
