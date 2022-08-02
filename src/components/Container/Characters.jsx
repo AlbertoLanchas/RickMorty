@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { allCharacters } from "../functions/getCharacters";
+import { allCharacters } from "../../functions/getCharacters";
 
 const Characters = () => {
   const [characters, setCharacters] = useState(null);

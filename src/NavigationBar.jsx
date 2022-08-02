@@ -1,6 +1,3 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap";
-import NavigationBar from "./NavigationBar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import Home from "./components/Container/Home";
@@ -8,20 +5,10 @@ import Characters from "./components/Container/Characters";
 import CharacterDetails from "./components/Container/CharacterDetails";
 import Episodes from "./components/Container/Episodes";
 import Empty from "./components/Container/Empty";
-import "./App.css";
 
-function App() {
+const NavigationBar = () => {
   return (
     <div className="App">
-      <h2 className="text-center my-5">
-        Rick & Morty <span className="wiki-color">WIKI</span>
-      </h2>
-      <div className="container">
-        <div className="row">
-          <div className="col-3"></div>
-          <div className="col-8"></div>
-        </div>
-      </div>
       <BrowserRouter>
         <NavLink to={`/`} key={"home"}>
           HOME
@@ -45,6 +32,6 @@ function App() {
       </BrowserRouter>
     </div>
   );
-}
+};
 
-export default App;
+export default NavigationBar;

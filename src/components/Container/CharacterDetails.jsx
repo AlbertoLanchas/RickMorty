@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import { unicCharacter } from "../functions/getCharacters";
+import { unicCharacter } from "../../functions/getCharacters.js";
 
 const CharacterDetails = () => {
   const params = useParams();
