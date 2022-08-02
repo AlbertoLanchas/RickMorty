@@ -4,12 +4,13 @@ import Home from "./components/Home";
 import Characters from "./components/Characters";
 import CharacterDetails from "./components/CharacterDetails";
 import Episodes from "./components/Episodes";
+import Empty from "./components/Empty";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <NavLink to={`/home`} key={"home"}>
+        <NavLink to={`/`} key={"home"}>
           HOME
         </NavLink>
         <NavLink to={`/characters`} key={"characters"}>
@@ -19,13 +20,14 @@ function App() {
           EPISODES
         </NavLink>
         <Routes>
-          <Route path="/home" element={<Home></Home>}></Route>
+          <Route path="/" element={<Home></Home>}></Route>
           <Route path="/characters" element={<Characters></Characters>}></Route>
           <Route
             path="/characters/:id"
             element={<CharacterDetails></CharacterDetails>}
           ></Route>
           <Route path="/episodes" element={<Episodes></Episodes>}></Route>
+          <Route path="*" element={<Empty></Empty>}></Route>
         </Routes>
       </BrowserRouter>
     </div>
