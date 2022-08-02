@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { allCharacters } from "../../functions/getCharacters";
 import Cards from "../Pure/Cards/Cards";
 import Filters from "../Pure/Filters/Filters";
+
 const Characters = () => {
   const [characters, setCharacters] = useState(null);
   useEffect(() => {
@@ -16,8 +17,6 @@ const Characters = () => {
           </div>
           <div className="col-8">
             <div className="row">
-              <Cards characters />
-              <Cards />
               <Cards />
             </div>
           </div>
