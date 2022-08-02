@@ -6,7 +6,7 @@ const allCharacters = async (state) => {
   // useEffect(() => {}, [request]);
 
   const request = await axios.get(
-    `https://rickandmortyapi.com/api/character/?page=${3}`
+    `https://rickandmortyapi.com/api/character/?page=${1}`
   );
   state(request.data.results);
 };
