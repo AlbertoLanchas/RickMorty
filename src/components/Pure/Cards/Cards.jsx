@@ -2,13 +2,7 @@ import React, { useEffect, useState } from "react";
 import { allCharacters } from "../../../functions/getCharacters";
 import styles from "../../../styles/Cards.module.scss";
 
-const Cards = () => {
-  const [characters, setCharacters] = useState(null);
-  useEffect(() => {
-    allCharacters(setCharacters);
-  }, []);
-  console.log(characters);
-
+const Cards = ({ characters }) => {
   return (
     <>
       {characters !== null
