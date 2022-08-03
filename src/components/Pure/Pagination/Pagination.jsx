@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { allCharacters } from "../../../functions/getCharacters";
 
-const Pagination = () => {
+const Pagination = ({ updatePageNumber }) => {
   let next = () => {
-    // setPageNumber((x) => x + 1);
+    updatePageNumber((x) => x + 1);
   };
   let prev = () => {
-    // setPageNumber((x) => x - 1);
+    updatePageNumber((x) => x - 1);
   };
 
   return (

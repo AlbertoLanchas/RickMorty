@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from "react";
-import { allCharacters } from "../../../functions/getCharacters";
+
 import styles from "../../../styles/Cards.module.scss";
 
-const Cards = ({ characters }) => {
+const Cards = ({ page, results }) => {
   return (
     <>
-      {characters !== null
-        ? characters.map((character) => {
-            let { id, name, image, location, status } = character;
+      {results
+        ? results.map((x) => {
+            let { id, name, image, location, status } = x;
+
             return (
-              <div key={character.id} className="col-4 mb-4 position-relative">
+              <div key={x.id} className="col-4 mb-4 position-relative">
                 <div className={styles.cards}>
                   <img
                     src={image}
