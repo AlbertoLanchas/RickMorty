@@ -21,7 +21,7 @@ const Characters = () => {
     (async function () {
       let data = await fetch(api).then((res) => res.json());
       updateFetchedData(data);
-      console.log(data);
+      // console.log(data);
     })();
   }, [api]);
 
