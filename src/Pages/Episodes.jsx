@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Cards from "../components/Pure/Cards/Cards";
+import InputGroup from "../components/Pure/Filters/Category/InputGroup";
 
 import "../styles/Episodes.css";
 
@@ -34,7 +35,10 @@ const Episodes = () => {
         </h5>
       </div>
       <div className="row">
-        <div class="col-3">Pick Episodes</div>
+        <div class="col-3">
+          <h4 class="text-center mb-4">Pick Episodes</h4>
+          <InputGroup name="Episode" total={51} setID={setID} />
+        </div>
         <div className="col-8">
           {" "}
           <div class="row">
