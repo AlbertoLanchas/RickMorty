@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { allCharacters } from "../../functions/getCharacters";
-import Cards from "../Pure/Cards/Cards";
-import Filters from "../Pure/Filters/Filters";
-import "../../styles/Characters.css";
-import Pagination from "../Pure/Pagination/Pagination";
-import Search from "../Pure/Search/Search";
+
+import Cards from "../components/Pure/Cards/Cards";
+import Filters from "../components/Pure/Filters/Filters";
+import "../styles/Characters.css";
+import Pagination from "../components/Pure/Pagination/Pagination";
+import Search from "../components/Pure/Search/Search";
 
 const Characters = () => {
   let [pageNumber, updatePageNumber] = useState(1);
@@ -15,7 +15,7 @@ const Characters = () => {
   let [search, setSearch] = useState("");
   let { info, results } = fetchedData;
 
-  let api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${search}`;
+  let api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${search}&status=${status}&gender=${gender}&species=${species}`;
 
   useEffect(() => {
     (async function () {
@@ -27,15 +27,21 @@ const Characters = () => {
 
   return (
     <div>
+      <h2 className="text-center mb-4">Characters</h2>
       <Search setSearch={setSearch} updatePageNumber={updatePageNumber} />
       <div className="container">
         <div className="row">
-          <div className="col-3">
-            <Filters></Filters>
-          </div>
-          <div className="col-8">
+          <Filters
+            pageNumber={pageNumber}
+            updateStatus={updateStatus}
+            updateGender={updateGender}
+            updateSpecies={updateSpecies}
+            updatePageNumber={updatePageNumber}
+          ></Filters>
+
+          <div className="col-lg-8 col-12">
             <div className="row">
-              <Cards page="/" results={results}></Cards>
+              <Cards page="/characters/" results={results}></Cards>
             </div>
           </div>
         </div>

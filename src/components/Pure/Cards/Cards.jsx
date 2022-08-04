@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import { Link } from "react-router-dom";
 import styles from "../../../styles/Cards.module.scss";
 
 const Cards = ({ page, results }) => {
@@ -10,8 +10,15 @@ const Cards = ({ page, results }) => {
             let { id, name, image, location, status } = x;
 
             return (
-              <div key={x.id} className="col-4 mb-4 position-relative">
-                <div className={styles.cards}>
+              <Link
+                style={{ textDecoration: "none" }}
+                to={`${page}${id}`}
+                key={x.id}
+                className="col-lg-4  col-md-6 col-12 mb-4 position-relative text-dark"
+              >
+                <div
+                  className={`${styles.cards} d-flex  flex-column justify-content-center`}
+                >
                   <img
                     src={image}
                     alt={name}
@@ -52,7 +59,7 @@ const Cards = ({ page, results }) => {
                     );
                   }
                 })()}
-              </div>
+              </Link>
             );
           })
         : "No characters found :("}
