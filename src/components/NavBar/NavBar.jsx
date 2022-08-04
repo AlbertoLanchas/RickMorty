@@ -1,15 +1,24 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import "../../App.css";
 
 const NavBar = () => {
   return (
-    <nav className="navbar navbar-expand-lg bg-light">
+    <nav className="navbar navbar-expand-lg bg-light mb-4">
       <div className="container">
-        <NavLink to={`/`} key={"characters"}>
+        <NavLink to={`/`} key={"home"}>
           <h2 className=" fs-2 text-center navbar-brand">
             Rick & Morty <span className="wiki-color">WIKI</span>
           </h2>
         </NavLink>
+        <style jsx>{`
+          button[aria-expanded="false"] > .close {
+            display: none;
+          }
+          button[aria-expanded="true"] > .open {
+            display: none;
+          }
+        `}</style>
         <button
           className="navbar-toggler"
           type="button"
@@ -19,7 +28,8 @@ const NavBar = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon"></span>
+          <i className="fas fa-bars open text-dark"></i>
+          <i className="fas fa-times close text-dark"></i>
         </button>
         <div
           className="collapse navbar-collapse justify-content-end"
@@ -28,7 +38,8 @@ const NavBar = () => {
           <ul className="navbar-nav fs-5">
             <li className="nav-item">
               <NavLink
-                className="nav-link active"
+                // activeClassName="active"
+                className="nav-link"
                 aria-current="page"
                 to={`/characters`}
                 key={"characters"}
@@ -38,7 +49,8 @@ const NavBar = () => {
             </li>
             <li className="nav-item">
               <NavLink
-                className="nav-link active"
+                // activeClassName="active"
+                className="nav-link"
                 aria-current="page"
                 to={`/episodes`}
                 key={"characters"}
@@ -48,12 +60,13 @@ const NavBar = () => {
             </li>
             <li className="nav-item">
               <NavLink
-                className="nav-link active"
+                // activeClassName="active"
+                className="nav-link"
                 aria-current="page"
                 to={`/locations`}
                 key={"characters"}
               >
-                EPISODES
+                LOCATION
               </NavLink>
             </li>
             <li className="nav-item dropdown">
