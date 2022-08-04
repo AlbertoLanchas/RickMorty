@@ -1,10 +1,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { NavLink } from "react-router-dom";
-import Home from "./components/Container/Home";
-import Characters from "./components/Container/Characters";
-import CharacterDetails from "./components/Container/CharacterDetails";
-import Episodes from "./components/Container/Episodes";
-import Empty from "./components/Container/Empty";
+import Home from "./Pages/Home";
+import Characters from "./Pages/Characters";
+import CharacterDetails from "./Pages/CharacterDetails";
+import Episodes from "./Pages/Episodes";
+import Empty from "./Pages/Empty";
 
 const NavigationBar = () => {
   return (

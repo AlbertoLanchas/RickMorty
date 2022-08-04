@@ -1,7 +1,7 @@
 import React from "react";
 import FilterBTN from "../FilterBTN";
 
-const Species = () => {
+const Species = ({ updatePageNumber, updateSpecies }) => {
   let species = [
     "Human",
     "Alien",
@@ -37,7 +37,14 @@ const Species = () => {
       >
         <div className="accordion-body d-flex flex-wrap gap-3">
           {species.map((items, index) => (
-            <FilterBTN key={index} name="status" index={index} items={items} />
+            <FilterBTN
+              key={index}
+              name="status"
+              index={index}
+              items={items}
+              task={updateSpecies}
+              updatePageNumber={updatePageNumber}
+            />
           ))}
         </div>
       </div>

@@ -4,30 +4,21 @@ import React, { useEffect, useState } from "react";
 import NavigationBar from "./NavigationBar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { NavLink } from "react-router-dom";
-import Home from "./components/Container/Home";
-import Characters from "./components/Container/Characters";
-import CharacterDetails from "./components/Container/CharacterDetails";
-import Episodes from "./components/Container/Episodes";
-import Empty from "./components/Container/Empty";
+import Home from "./Pages/Home";
+import Characters from "./Pages/Characters";
+import CharacterDetails from "./Pages/CharacterDetails";
+import Episodes from "./Pages/Episodes";
+import Empty from "./Pages/Empty";
 import "./App.css";
 import Filters from "./components/Pure/Filters/Filters";
+import NavBar from "./components/NavBar/NavBar";
+import Location from "./Pages/Location";
 
 function App() {
   return (
-    <div className="App">
-      <h2 className="text-center my-5">
-        Rick & Morty <span className="wiki-color">WIKI</span>
-      </h2>
-      <BrowserRouter>
-        <NavLink to={`/`} key={"home"}>
-          HOME
-        </NavLink>
-        <NavLink to={`/characters`} key={"characters"}>
-          CHARACTERS
-        </NavLink>
-        <NavLink to={`/episodes`} key={"episodes"}>
-          EPISODES
-        </NavLink>
+    <BrowserRouter>
+      <div className="App">
+        <NavBar />
         <Routes>
           <Route path="/" element={<Home></Home>}></Route>
           <Route path="/characters" element={<Characters></Characters>}></Route>
@@ -36,10 +27,11 @@ function App() {
             element={<CharacterDetails></CharacterDetails>}
           ></Route>
           <Route path="/episodes" element={<Episodes></Episodes>}></Route>
+          <Route path="/locations" element={<Location></Location>}></Route>
           <Route path="*" element={<Empty></Empty>}></Route>
         </Routes>
-      </BrowserRouter>
-    </div>
+      </div>
+    </BrowserRouter>
   );
 }
 

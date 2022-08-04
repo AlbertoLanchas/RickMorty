@@ -10,10 +10,18 @@ const Filters = ({
   updateGender,
   updateSpecies,
 }) => {
+  let clear = () => {
+    updatePageNumber("");
+    updateStatus("");
+    updateGender("");
+    updateSpecies("");
+    window.location.reload(false);
+  };
   return (
     <div className="col-3">
       <div className="text-center fw-bold fs-4 mb-2">Filters</div>
       <div
+        onClick={clear}
         style={{ cursor: "pointer" }}
         className="text-center text-primary text-decoration-underline"
       >
@@ -24,8 +32,14 @@ const Filters = ({
           updatePageNumber={updatePageNumber}
           updateStatus={updateStatus}
         />
-        <Species />
-        <Gender />
+        <Species
+          updateSpecies={updateSpecies}
+          updatePageNumber={updatePageNumber}
+        />
+        <Gender
+          updateGender={updateGender}
+          updatePageNumber={updatePageNumber}
+        />
       </div>
     </div>
   );

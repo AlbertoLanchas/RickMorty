@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { allCharacters } from "../../functions/getCharacters";
-import Cards from "../Pure/Cards/Cards";
-import Filters from "../Pure/Filters/Filters";
-import "../../styles/Characters.css";
-import Pagination from "../Pure/Pagination/Pagination";
-import Search from "../Pure/Search/Search";
+
+import Cards from "../components/Pure/Cards/Cards";
+import Filters from "../components/Pure/Filters/Filters";
+import "../styles/Characters.css";
+import Pagination from "../components/Pure/Pagination/Pagination";
+import Search from "../components/Pure/Search/Search";
 
 const Characters = () => {
   let [pageNumber, updatePageNumber] = useState(1);
