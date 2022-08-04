@@ -1,16 +1,16 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import "../../App.css";
 
 const NavBar = () => {
   return (
     <nav className="navbar navbar-expand-lg bg-light mb-4">
       <div className="container">
-        <NavLink to={`/`} key={"home"}>
-          <h2 className=" fs-2 text-center navbar-brand">
-            Rick & Morty <span className="wiki-color">WIKI</span>
+        <Link to={`/`} key={"home"}>
+          <h2 style={{ textDecoration: "none" }} className="fs-3 text-dark">
+            Rick & Morty <span class="wiki-color">WIKI</span>
           </h2>
-        </NavLink>
+        </Link>
         <style jsx>{`
           button[aria-expanded="false"] > .close {
             display: none;
@@ -20,7 +20,7 @@ const NavBar = () => {
           }
         `}</style>
         <button
-          className="navbar-toggler"
+          className="navbar-toggler border-0"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNavDropdown"

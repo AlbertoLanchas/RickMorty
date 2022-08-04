@@ -1,5 +1,6 @@
 span {
   color: greenyellow;
+  text-decoration: none;
 }
 
 .active {

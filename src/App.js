@@ -27,7 +27,15 @@ function App() {
             element={<CharacterDetails></CharacterDetails>}
           ></Route>
           <Route path="/episodes" element={<Episodes></Episodes>}></Route>
+          <Route
+            path="/episodes/:id"
+            element={<CharacterDetails></CharacterDetails>}
+          ></Route>
           <Route path="/locations" element={<Location></Location>}></Route>
+          <Route
+            path="/locations/:id"
+            element={<CharacterDetails></CharacterDetails>}
+          ></Route>
           <Route path="*" element={<Empty></Empty>}></Route>
         </Routes>
       </div>

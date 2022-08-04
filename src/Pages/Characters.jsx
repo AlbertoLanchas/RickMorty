@@ -27,6 +27,7 @@ const Characters = () => {
 
   return (
     <div>
+      <h2 className="text-center mb-4">Characters</h2>
       <Search setSearch={setSearch} updatePageNumber={updatePageNumber} />
       <div className="container">
         <div className="row">
@@ -40,7 +41,7 @@ const Characters = () => {
 
           <div className="col-8">
             <div className="row">
-              <Cards page="/" results={results}></Cards>
+              <Cards page="/characters/" results={results}></Cards>
             </div>
           </div>
         </div>

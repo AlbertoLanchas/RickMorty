@@ -42,7 +42,7 @@ const Episodes = () => {
         <div className="col-8">
           {" "}
           <div class="row">
-            <Cards results={results} />
+            <Cards page="/episodes/" results={results} />
           </div>
         </div>
       </div>
