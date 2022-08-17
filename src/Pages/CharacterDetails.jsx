@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
+import NavBar from "../components/NavBar/NavBar.jsx";
 import { unicCharacter } from "../functions/getCharacters.js";
 
 const CharacterDetails = () => {
@@ -11,6 +12,7 @@ const CharacterDetails = () => {
   }, []);
   return (
     <>
+      <NavBar></NavBar>
       {character !== null ? (
         <div className="container d-flex justify-content-center mb-5">
           <div className="d-flex flex-column gap-3">
