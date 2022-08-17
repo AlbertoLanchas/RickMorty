@@ -7,7 +7,10 @@ const NavBar = () => {
     <nav className="navbar navbar-expand-lg bg-light mb-4">
       <div className="container">
         <Link to={`/`} key={"home"}>
-          <h2 style={{ textDecoration: "none" }} className="fs-3 text-dark">
+          <h2
+            // style={{ textDecoration: "none" }}
+            className="fs-3 text-dark"
+          >
             Rick & Morty <span class="wiki-color">WIKI</span>
           </h2>
         </Link>
@@ -53,7 +56,7 @@ const NavBar = () => {
                 className="nav-link"
                 aria-current="page"
                 to={`/episodes`}
-                key={"characters"}
+                key={"episodes"}
               >
                 EPISODES
               </NavLink>
@@ -64,7 +67,7 @@ const NavBar = () => {
                 className="nav-link"
                 aria-current="page"
                 to={`/locations`}
-                key={"characters"}
+                key={"locations"}
               >
                 LOCATION
               </NavLink>

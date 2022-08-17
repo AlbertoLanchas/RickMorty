@@ -5,6 +5,7 @@ import Filters from "../components/Pure/Filters/Filters";
 import "../styles/Characters.css";
 import Pagination from "../components/Pure/Pagination/Pagination";
 import Search from "../components/Pure/Search/Search";
+import NavBar from "../components/NavBar/NavBar";
 
 const Characters = () => {
   let [pageNumber, updatePageNumber] = useState(1);
@@ -27,6 +28,7 @@ const Characters = () => {
 
   return (
     <div>
+      <NavBar></NavBar>
       <h2 className="text-center mb-4">Characters</h2>
       <Search setSearch={setSearch} updatePageNumber={updatePageNumber} />
       <div className="container">
