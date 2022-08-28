@@ -1,19 +1,20 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
+import "./NavBar.scss";
 import "../../App.css";
 
 const NavBar = () => {
   return (
     <nav className="navbar navbar-expand-lg bg-light mb-4">
       <div className="container">
-        <Link to={`/`} key={"home"}>
+        <NavLink to={`/`} key={"home"} className="link_home">
           <h2
             // style={{ textDecoration: "none" }}
-            className="fs-3 text-dark"
+            className="fs-3 text-dark logo"
           >
             Rick & Morty <span class="wiki-color">WIKI</span>
           </h2>
-        </Link>
+        </NavLink>
         <style jsx>{`
           button[aria-expanded="false"] > .close {
             display: none;

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import NavBar from "../components/NavBar/NavBar.jsx";
 import { unicCharacter } from "../functions/getCharacters.js";
+import "../styles/Cards.module.scss";
 
 const CharacterDetails = () => {
   const { id } = useParams();

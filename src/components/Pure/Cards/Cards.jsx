@@ -24,11 +24,18 @@ const Cards = ({ page, results }) => {
                     alt={name}
                     className={`${styles.img} img-fluid`}
                   />
-                  <div style={{ padding: "10px" }} className="content">
-                    <div className="fs-5 fw-bold mb-4">{name}</div>
+                  <div
+                    style={{ padding: "10px" }}
+                    className={`${styles.content}`}
+                  >
+                    <div className={`${styles.text} fs-5 fw-bold mb-4`}>
+                      {name}
+                    </div>
                     <div className="">
-                      <div className="fs-6">Last Location</div>
-                      <div className="fs-5">{location.name}</div>
+                      <div className={`${styles.text} fs-6`}>Last Location</div>
+                      <div className={`${styles.text} fs-5`}>
+                        {location.name}
+                      </div>
                     </div>
                   </div>
                 </div>

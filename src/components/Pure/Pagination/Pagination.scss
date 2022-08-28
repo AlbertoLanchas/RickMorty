@@ -1,0 +1,36 @@
+.btn_pagination {
+  background-color: rgba(55, 248, 17, 0.7) !important;
+  text-decoration: none !important;
+  border: 2px black solid !important;
+  border-radius: 200px;
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  text-decoration: none !important;
+  a {
+    color: rgb(0, 0, 0) !important;
+    border-radius: 15px;
+    text-decoration: none !important;
+  }
+}
+
+.btn_number {
+  .page-link {
+    color: rgb(0, 0, 0) !important;
+    border-radius: 15px;
+    background-color: rgba(57, 255, 110, 0.8) !important;
+    text-decoration: none !important;
+    border: 2px black solid !important;
+    border-radius: 200px;
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    text-decoration: none !important;
+  }
+  :focus {
+    color: white !important;
+    border-radius: 200px black solid !important;
+    background-color: rgba(57, 255, 110, 1) !important;
+  }
+  .active {
+    border-bottom: 2px solid black !important ;
+  }
+}
