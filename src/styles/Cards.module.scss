@@ -1,75 +1,33 @@
+$radius: 10px;
+
 .cards {
-  width: 300px;
-  height: 400px;
-  background: #000;
-  border-radius: 30px;
-  overflow: hidden;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.25s ease;
-  backface-visibility: hidden;
+  border-radius: $radius;
+  border: 2px solid black;
+  background-color: white;
+  // height: 90%;
+  // width: 100%;
+  // overflow: hidden;
 
-  :hover {
-    transform: scale(0.9);
+  // .text {
+  //   opacity: 0;
+  // }
+  // :hover {
+  //   .text {
+  //     opacity: 1;
+  //   }
+  // }
+}
 
-    .text {
-      margin-bottom: 0px;
-      opacity: 1 !important;
-    }
+.content {
+  padding: 10px;
+}
 
-    :after {
-      height: 280px;
-    }
-    .img {
-      transform: scale(1.25);
-    }
-  }
-
-  :after {
-    width: 100%;
-    content: "";
-    left: 0px;
-    bottom: 0px;
-    height: 150px;
-    position: absolute;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1));
-    z-index: 20;
-    transition: all 0.25s ease;
-  }
-
-  .img {
-    height: 100%;
-    z-index: 10;
-    transition: all 0.25s ease;
-  }
-
-  .content {
-    z-index: 30;
-    position: absolute;
-    bottom: 0px;
-    color: rgb(255, 255, 255) !important;
-    padding: 20px;
-    padding-bottom: 30px;
-
-    .text {
-      font-size: 0.8rem;
-      opacity: 0;
-      margin-bottom: -170px;
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      flex-direction: column;
-    }
-  }
+.img {
+  border-radius: $radius $radius 0 0;
 }
 
 .badge {
-  position: absolute;
-  top: 10px;
+  top: 20px;
   right: 20px;
   font-size: 17px;
-  z-index: 30;
 }

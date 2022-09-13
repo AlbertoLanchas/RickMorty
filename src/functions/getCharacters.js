@@ -13,7 +13,7 @@ const unicCharacter = async (id, state) => {
     `https://rickandmortyapi.com/api/character/${id}`
   );
   state(request.data);
-  console.log(request.data);
+  // console.log(request.data);
 };
 
 export { allCharacters, unicCharacter };

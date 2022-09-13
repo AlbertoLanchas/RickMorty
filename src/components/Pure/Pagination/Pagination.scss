@@ -6,10 +6,12 @@
   backdrop-filter: blur(1px);
   -webkit-backdrop-filter: blur(1px);
   text-decoration: none !important;
+  width: 100px !important;
   a {
     color: rgb(0, 0, 0) !important;
     border-radius: 15px;
     text-decoration: none !important;
+    box-shadow: none;
   }
 }
 
@@ -26,11 +28,15 @@
     text-decoration: none !important;
   }
   :focus {
-    color: white !important;
+    color: black !important;
     border-radius: 200px black solid !important;
-    background-color: rgba(57, 255, 110, 1) !important;
+    font-weight: bold;
   }
   .active {
     border-bottom: 2px solid black !important ;
   }
+}
+
+.pagination {
+  box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.25);
 }

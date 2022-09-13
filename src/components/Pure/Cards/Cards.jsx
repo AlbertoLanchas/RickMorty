@@ -31,12 +31,11 @@ const Cards = ({ page, results }) => {
                     <div className={`${styles.text} fs-5 fw-bold mb-4`}>
                       {name}
                     </div>
-                    <div className="">
-                      <div className={`${styles.text} fs-6`}>Last Location</div>
-                      <div className={`${styles.text} fs-5`}>
-                        {location.name}
-                      </div>
+
+                    <div className={`${styles.text} fs-6 fw-normal`}>
+                      Last Location
                     </div>
+                    <div className={`${styles.text} fs-5`}>{location.name}</div>
                   </div>
                 </div>
                 {(() => {

@@ -2,6 +2,7 @@ import React from "react";
 import Gender from "./Category/Gender";
 import Species from "./Category/Species";
 import Status from "./Category/Status";
+import "./Filter.scss";
 
 const Filters = ({
   pageNumber,
