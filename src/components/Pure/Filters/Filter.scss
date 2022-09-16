@@ -4,7 +4,6 @@
 
 .accordion-button {
   background-color: rgba(55, 248, 17, 0.6);
-
   color: black;
   &:focus {
     background-color: rgba(55, 248, 17, 1);
@@ -17,6 +16,7 @@
   background-color: rgba(55, 248, 17, 0.6);
   color: black;
   font-weight: bold;
+  box-shadow: none;
 }
 .accordion-item {
   background-color: transparent;
@@ -24,6 +24,7 @@
 }
 .accordion-body {
   background-color: transparent;
+  border: 0px black solid;
 }
 
 .accordion-collapse {

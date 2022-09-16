@@ -30,10 +30,7 @@ const Episodes = () => {
       <div className="container">
         <div className="row mb-4">
           <h2 className="text-center mb-3">
-            Episode:{" "}
-            <span className="text-primary">
-              {name === "" ? "Unknown" : name}
-            </span>
+            Episode: <span>{name === "" ? "Unknown" : name}</span>
           </h2>
           <h5 className="text-center">
             Air Date:{air_date === "" ? "Unknown" : air_date}
