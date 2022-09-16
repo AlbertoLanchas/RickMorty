@@ -3,6 +3,7 @@ import { useParams } from "react-router";
 import NavBar from "../components/NavBar/NavBar.jsx";
 import { unicCharacter } from "../functions/getCharacters.js";
 import "../styles/Cards.module.scss";
+import "../styles/CharacterDetails.css";
 
 const CharacterDetails = () => {
   const { id } = useParams();
@@ -15,9 +16,9 @@ const CharacterDetails = () => {
     <>
       <NavBar></NavBar>
       {character !== null ? (
-        <div className="container d-flex justify-content-center mb-5">
+        <div className="container d-flex justify-content-center mb-5 target">
           <div className="d-flex flex-column gap-3">
-            <h2 className="text-center">{name}</h2>
+            <h2 className="text-center title-card">{name}</h2>
             <img src={image} alt={id} className="img-fluid" />
             {(() => {
               if (status === "Dead") {

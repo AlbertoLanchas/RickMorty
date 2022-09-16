@@ -7,9 +7,20 @@
   flex-direction: column;
   padding: 40px;
   width: 100%;
-  height: 800px;
+  height: 100vh;
   margin: 0;
   color: white;
   font-weight: 700;
   font-size: 30px;
+}
+
+.portal {
+  position: absolute;
+  background-color: transparent;
+  top: 30%;
+  right: 2%;
+  height: 70%;
+  width: 15%;
+  border-radius: 50%;
+  cursor: pointer;
 }

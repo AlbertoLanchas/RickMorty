@@ -1,7 +1,3 @@
-.detail-color {
-  color: white;
-}
-
 .active {
   border-bottom: 2.5px solid black !important;
   font-weight: bold;
