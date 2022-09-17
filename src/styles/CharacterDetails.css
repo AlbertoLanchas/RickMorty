@@ -1,9 +1,10 @@
 .target {
   box-sizing: border-box;
-  background: rgba(179, 255, 149, 0.3);
+  background: rgba(255, 255, 255, 0.7);
   border: solid 0.5px black;
   padding: 20px;
   padding-bottom: 3rem;
+  max-width: 600px;
 }
 
 .title-card {
