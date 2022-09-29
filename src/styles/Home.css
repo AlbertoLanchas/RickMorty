@@ -21,6 +21,7 @@
   align-items: center;
   gap: 70px;
   margin: 3%;
+
   /* border: 1px solid red; */
 }
 
@@ -29,7 +30,7 @@
   padding: 20px 30px;
   margin: 20px;
   /* border: 1px solid blue; */
-  width: 600px;
+  width: 60%;
   text-align: center;
   background-color: white;
   color: white;
@@ -39,6 +40,16 @@
   font-weight: 1000;
   letter-spacing: 0.1em;
   transition: 0.5s;
+}
+
+@media screen and (max-width: 580px) {
+  .home-link {
+    width: 100%;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    padding: 10px 15px;
+    margin: 30px 0 0 0;
+  }
 }
 
 .home-link:hover {
